@@ -1,6 +1,4 @@
-### Using Karma+Mocha to start Unit Test for Mojo
-
-####Set up Test Framework
+####Set up Karma+Mocha to start Unit Test for Mojo
 #####1. Install Node.js https://nodejs.org/ 
 For Windows, click "Install" directly.
 #####2. Install Karma & Mocha
