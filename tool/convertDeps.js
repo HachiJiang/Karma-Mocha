@@ -1,7 +1,7 @@
 var fs = require('fs');
 var path = require('path');
 
-var parent_path = 'javascript/';
+var parent_path = 'code/html/MSTRWeb/javascript/';
 var input_path = 'jsfiledeps.properties';
 var output_path = '../test-main.js';
 
@@ -10,9 +10,8 @@ var str2 = fs.readFileSync('test-main-2.js', 'utf-8');
 var str3 = fs.readFileSync('test-main-3.js', 'utf-8');
 
 var json_paths = {
-  "jquery": "lib/jquery-2.0.3.min",
-  "assertion_lib": "lib/should",
-  "global_settings": "lib/global_settings",
+  "jquery": parent_path + "libraries/jquery-2.0.3.min",
+  "global_settings": "test/javascript/mojo/js/source/global_settings",
   "mojo_js_source_mstrmojo": parent_path + "mojo/js/source/mstrmojo"
 };
 var json_shim = {};
@@ -61,11 +60,7 @@ function convertDeps(filePath) {
       };
     }
     json_shim[file_name].deps.push("global_settings");
-    json_shim[file_name].deps.push("assertion_lib");
   };
-
-  //fs.appendFileSync('paths.js', JSON.stringify(json_paths), 'utf-8');
-  //fs.appendFileSync('shim.js', JSON.stringify(json_shim), 'utf-8');
 
   fs.writeFileSync(output_path, str1, 'utf-8');
   fs.appendFileSync(output_path, JSON.stringify(json_paths), 'utf-8');

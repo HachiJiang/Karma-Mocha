@@ -6,7 +6,7 @@ define(['mojo_js_source_gm_GMUtility'], function() {
       var arr2 = [0, 1];
       it(arr1 + " should be equal to " + arr2, function() {
         var result = $GMUtility.isDigitalArrayEqual(arr1, arr2);
-        result.should.equal(true);
+        expect(result).to.equal(true);
       });
     });
   });
