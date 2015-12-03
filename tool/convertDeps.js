@@ -1,7 +1,7 @@
 var fs = require('fs');
 var path = require('path');
 
-var parent_path = 'code/html/MSTRWeb/javascript/';
+var parent_path = 'javascript/';
 var input_path = 'jsfiledeps.properties';
 var output_path = '../test-main.js';
 
@@ -11,7 +11,7 @@ var str3 = fs.readFileSync('test-main-3.js', 'utf-8');
 
 var json_paths = {
   "jquery": parent_path + "libraries/jquery-2.0.3.min",
-  "global_settings": "test/javascript/mojo/js/source/global_settings",
+  "global_settings": "test/mojo/js/source/global_settings",
   "mojo_js_source_mstrmojo": parent_path + "mojo/js/source/mstrmojo"
 };
 var json_shim = {};

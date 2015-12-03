@@ -11,5 +11,7 @@ Object.keys(window.__karma__.files).forEach(function(file) {
 require.config({
   // Karma serves files under /base, which is the basePath from your config file
   baseUrl: '/base',
+  //give RequireJS lots of time to load modules, "0" 
+  //waitSeconds: 300,
 
   paths: 

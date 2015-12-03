@@ -16,9 +16,9 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       'test-main.js',
-      {pattern: 'code/html/MSTRWeb/javascript/mojo/js/source/**/*.js', included: false},
-      {pattern: 'test/javascript/mojo/js/source/**/*.js', included: false},
-      {pattern: 'code/html/MSTRWeb/javascript/libraries/*.js', included: false},
+      {pattern: 'javascript/mojo/js/source/**/*.js', included: false},
+      {pattern: 'test/mojo/js/source/**/*.js', included: false},
+      {pattern: 'javascript/libraries/*.js', included: false},
     ],
 
 
@@ -42,7 +42,10 @@ module.exports = function(config) {
 
     // web server port
     port: 9876,
-
+    // If browser does not capture in given timeout [ms], kill it, Default: 60000
+    //captureTimeOut: 60000,
+    // How long will Karma wait for a message from a browser before disconnecting from it (in ms). Default: 10000
+    //browserNoActivityTimeout: 30000
 
     // enable / disable colors in the output (reporters and logs)
     colors: true,
